@@ -6,6 +6,9 @@ using namespace std;
 int n, a[1000], dp[1000][1000];
 //dp[i][j]は，i~jまでの区間で考えたとき，何個取り除けるかを表す
 
+//dp[ l ][ r ] = 全ての i について dp[ l ][ i ] と dp[ i ][ r ] を確認して更新する区間DP
+//この場合，オーダーはO(N^3)
+
 //debug用
 void matrix(int ix, int jx){
     cout << ix << ", " << jx << endl;
